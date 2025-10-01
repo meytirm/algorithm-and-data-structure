@@ -4,4 +4,5 @@ This repository contains implementations of common data structures and algorithm
 Goal: practice + reference for coding interviews.
 
 ## Covered Topics:
-- [x] Binary Search
+- [x] Binary Search (iterative)
+- [ ] Binary Search (recursive)
