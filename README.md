@@ -6,3 +6,4 @@ Goal: practice + reference for coding interviews.
 ## Covered Topics:
 - [x] Binary Search (iterative)
 - [ ] Binary Search (recursive)
+- [x] Throttle
