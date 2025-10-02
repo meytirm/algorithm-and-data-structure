@@ -1,10 +1,22 @@
 import {debounce} from "../src/debounce/debounce";
 
 describe('debounce', () => {
-  it('should return after 200 ms', () => {
+  it('should not call immediately', () => {
     const mockFn = jest.fn();
     const debounced = debounce(mockFn, 200);
 
     expect(mockFn).not.toHaveBeenCalled();
+  });
+
+  it('should call after delay', () => {
+    const mockFn = jest.fn();
+    const debounced = debounce(mockFn, 200);
+    jest.useFakeTimers()
+    debounced('hello')
+    jest.advanceTimersByTime(200)
+
+
+    expect(mockFn).toHaveBeenCalledTimes(1)
+    expect(mockFn).toHaveBeenCalledWith('hello')
   });
 })
