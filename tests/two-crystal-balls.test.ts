@@ -2,10 +2,10 @@ import {twoCrystalBalls} from "../src/two-crystal-balls/two-crystal-balls";
 
 describe('Two Crystal Balls Algorithm', () =>{
   it('should find high enough index', () => {
-    const arr = [false, false, false, false, false, false, false, false, false, true, true, true, true]
+    const arr = [false, false, false, false, false, false, false, false, false, false, false, true, true, true, true, true]
     const crystalBall = twoCrystalBalls(arr)
 
-    expect(crystalBall).toBe(9)
+    expect(crystalBall).toBe(11)
   });
 
   it('should return -1 if no true value', () => {
