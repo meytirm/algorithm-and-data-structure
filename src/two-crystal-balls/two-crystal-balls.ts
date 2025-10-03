@@ -9,5 +9,12 @@ export function twoCrystalBalls(arr: boolean[]) {
     }
   }
 
-  console.log(foundBrokenFloorIndex, rootOfFloors)
+  for (let i = foundBrokenFloorIndex - rootOfFloors; i < arr.length; i++) {
+    if (arr[i]) {
+      console.log(i)
+      return i
+    }
+  }
+
+  return -1
 }
