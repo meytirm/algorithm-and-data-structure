@@ -6,5 +6,8 @@ Goal: practice + reference for coding interviews.
 ## Covered Topics:
 - [x] Binary Search (iterative)
 - [ ] Binary Search (recursive)
+- [x] Two Crystal Balls
+- [x] Bubble Sort
 - [x] Throttle
 - [x] Debounce
+- 
