@@ -8,7 +8,7 @@ Goal: practice + reference for coding interviews.
 - [ ] Binary Search (recursive)
 - [x] Two Crystal Balls
 - [x] Bubble Sort
-- [ ] LinkedList
+- [x] LinkedList
 - [x] Throttle
 - [x] Debounce
 - 
