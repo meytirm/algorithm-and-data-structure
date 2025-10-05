@@ -21,8 +21,8 @@ interface LinkedListInterface<T> {
 
 class DoubleNode<T> implements NodeInterface<T> {
   value: T;
-  next: DoubleNode<T> | null;
-  prev: DoubleNode<T> | null;
+  next: NodeInterface<T> | null;
+  prev: NodeInterface<T> | null;
 
   constructor(value: T) {
     this.value = value;
@@ -32,8 +32,8 @@ class DoubleNode<T> implements NodeInterface<T> {
 }
 
 export class LinkedList<T> implements LinkedListInterface<T> {
-  head: DoubleNode<T> | null;
-  tail: DoubleNode<T> | null;
+  head: NodeInterface<T> | null;
+  tail: NodeInterface<T> | null;
 
   constructor() {
     this.head = null;
