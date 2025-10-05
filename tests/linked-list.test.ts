@@ -11,5 +11,7 @@ describe('linked list', () => {
     if (node) {
       expect(node.value).toBe(1);
     }
+    linkedList.remove(1)
+    expect(linkedList.isEmpty()).toBe(true);
   })
 });
