@@ -30,9 +30,20 @@ class Queue<T> implements QueueInterface<T> {
   }
 
   enqueue(value: T) {
+    const newNode = new QueueNode(value);
+    if (!this.head && !this.tail) {
+      this.head = newNode;
+      this.tail = newNode;
+      return;
+    }
+    if (this.tail) {
+      this.tail.next = newNode;
+      this.tail = newNode;
+    }
   }
-  dequeue() {
-  }
-  peek() {
-  }
+  // TODO implement dequeue and peek
+  // dequeue() {
+  // }
+  // peek() {
+  // }
 }
