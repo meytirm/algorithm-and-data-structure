@@ -21,7 +21,7 @@ class QueueNode<T> implements QueueNodeInterface<T> {
   }
 }
 
-class Queue<T> implements QueueInterface<T> {
+export class Queue<T> implements QueueInterface<T> {
   head: QueueNodeInterface<T> | undefined;
   tail: QueueNodeInterface<T> | undefined;
   constructor() {
@@ -41,9 +41,21 @@ class Queue<T> implements QueueInterface<T> {
       this.tail = newNode;
     }
   }
-  // TODO implement dequeue and peek
-  // dequeue() {
-  // }
-  // peek() {
-  // }
+  dequeue() {
+    if (!this.head) return;
+    if (this.head === this.tail) {
+      const value = this.head.value;
+      this.head = undefined;
+      this.tail = undefined;
+      return value;
+    }
+    const head = this.head;
+    this.head = this.head.next;
+    head.next = undefined;
+    return head.value;
+  }
+  peek() {
+    if (!this.head) return;
+    return this.head.value;
+  }
 }
