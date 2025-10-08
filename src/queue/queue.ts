@@ -1,6 +1,6 @@
 interface QueueNodeInterface<T> {
   value: T;
-  next: QueueNodeInterface<T>;
+  next: QueueNodeInterface<T> | undefined;
 }
 
 interface QueueInterface<T> {
@@ -10,6 +10,15 @@ interface QueueInterface<T> {
   enqueue(value: T): void;
   dequeue(): T | undefined;
   peek(): T | undefined;
+}
+
+class QueueNode<T> implements QueueNodeInterface<T> {
+  value: T
+  next: QueueNodeInterface<T> | undefined;
+  constructor(value: T) {
+    this.value = value;
+    this.next = undefined
+  }
 }
 
 class Queue<T> implements QueueInterface<T> {
