@@ -12,7 +12,7 @@ interface StackInterface<T> {
   peek(): T | undefined;
 }
 
-export class StackNode<T> implements StackNodeInterface<T> {
+class StackNode<T> implements StackNodeInterface<T> {
   value: T;
   next: StackNodeInterface<T> | undefined;
   constructor(value: T) {
@@ -21,7 +21,7 @@ export class StackNode<T> implements StackNodeInterface<T> {
   }
 }
 
-class Stack<T> implements StackInterface<T> {
+export class Stack<T> implements StackInterface<T> {
   head: StackNodeInterface<T> | undefined;
   tail: StackNodeInterface<T> | undefined;
   constructor() {
