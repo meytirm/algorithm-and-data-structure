@@ -50,4 +50,8 @@ class Stack<T> implements StackInterface<T> {
     this.head = head;
     return value;
   }
+
+  peek() {
+    return this.head?.value;
+  }
 }
