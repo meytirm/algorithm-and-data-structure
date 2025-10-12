@@ -1,3 +1,5 @@
+import {Stack} from "../src/stack/stack";
+
 describe('Stack', () => {
   it ('should push and pop', () => {
     const stack = new Stack()
