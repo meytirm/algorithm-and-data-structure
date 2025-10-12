@@ -9,6 +9,7 @@ Goal: practice + reference for coding interviews.
 - [x] Two Crystal Balls
 - [x] Bubble Sort
 - [x] LinkedList
+- [x] Queue
+- [x] Stack
 - [x] Throttle
 - [x] Debounce
-- 
