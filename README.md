@@ -10,5 +10,6 @@ Goal: practice + reference for coding interviews.
 - [x] Bubble Sort
 - [x] LinkedList
 - [x] Queue
+- [x] Stack
 - [x] Throttle
 - [x] Debounce
