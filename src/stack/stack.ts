@@ -39,4 +39,15 @@ class Stack<T> implements StackInterface<T> {
     newNode.next = this.head;
     this.head = newNode;
   }
+
+  pop() {
+    if (!this.head) return undefined;
+    const value = this.head.value;
+    const head = this.head.next
+    if (head) {
+      head.next = undefined;
+    }
+    this.head = head;
+    return value;
+  }
 }
