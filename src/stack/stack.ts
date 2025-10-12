@@ -1,6 +1,6 @@
 interface StackNodeInterface<T> {
   value: T;
-  next: StackNodeInterface<T> | undefined;
+  prev: StackNodeInterface<T> | undefined;
 }
 
 interface StackInterface<T> {
@@ -14,10 +14,10 @@ interface StackInterface<T> {
 
 class StackNode<T> implements StackNodeInterface<T> {
   value: T;
-  next: StackNodeInterface<T> | undefined;
+  prev: StackNodeInterface<T> | undefined;
   constructor(value: T) {
     this.value = value;
-    this.next = undefined;
+    this.prev = undefined;
   }
 }
 
@@ -36,16 +36,16 @@ export class Stack<T> implements StackInterface<T> {
       this.tail = newNode;
       return;
     }
-    newNode.next = this.head;
+    newNode.prev = this.head;
     this.head = newNode;
   }
 
   pop() {
     if (!this.head) return undefined;
     const value = this.head.value;
-    const head = this.head.next
+    const head = this.head.prev
     if (head) {
-      head.next = undefined;
+      head.prev = undefined;
     }
     this.head = head;
     return value;
