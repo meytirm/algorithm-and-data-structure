@@ -8,7 +8,7 @@ interface RingBufferInterface<T> {
   clear(): void
 }
 
-class RingBuffer<T> implements RingBufferInterface<T> {
+export class RingBuffer<T> implements RingBufferInterface<T> {
   size: number
   constructor(size: number) {
     this.size = size
