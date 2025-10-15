@@ -1,3 +1,5 @@
+import {RingBuffer} from "../src/ring-buffer/ring-buffer";
+
 describe('RingBuffer', () => {
   it('should enqueue and dequeue', () => {
     const ringBuffer = new RingBuffer(3)
