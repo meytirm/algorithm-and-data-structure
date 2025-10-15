@@ -25,7 +25,6 @@ export class RingBuffer<T> implements RingBufferInterface<T> {
       this.buffer[this.head] = value
       this.head = (this.head + 1) % this.size
       this.count++
-      console.log('added:', this.count)
       return;
     }
     console.log('Ring buffer is full.')
