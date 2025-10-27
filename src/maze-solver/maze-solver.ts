@@ -3,7 +3,13 @@ export type Point = {
   y: number;
 }
 
-function walk(maze: string[], wall: string, curr: Point, end: Point, seen: boolean[][]):boolean {
+const dir = [
+  [-1, 0],
+  [1, 0],
+  [0, -1],
+  [0, 1]
+]
+function walk(maze: string[], wall: string, curr: Point, end: Point, seen: boolean[][], path: Point[]):boolean {
   if (curr.x < 0 || curr.y > maze[0].length || curr.y < 0 || curr.y > maze.length) {
     return false;
   }
@@ -13,12 +19,24 @@ function walk(maze: string[], wall: string, curr: Point, end: Point, seen: boole
   }
 
   if (curr.x === end.x && curr.y === end.y) {
+    path.push(end);
     return true;
   }
 
   if (seen[curr.y][curr.x]) {
     return false;
   }
+
+  path.push(curr);
+
+  for (let i = 0; i < dir.length; i++) {
+    const [x, y] = dir[i];
+    if (walk(maze, wall, { x: curr.x + x, y: curr.y + y }, end, seen, path)) {
+      return true;
+    }
+  }
+
+  path.pop()
 }
 
 export default function solve(maze: string[], wall: string, start: Point, end: Point): Point[] {
