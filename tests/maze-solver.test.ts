@@ -1,4 +1,4 @@
-import maze_solver from "../src/maze-solver/maze-solver";
+import maze_solver, {Point} from "../src/maze-solver/maze-solver";
 
 test("maze solver", function () {
   const maze = [
