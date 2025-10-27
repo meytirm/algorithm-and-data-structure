@@ -14,3 +14,4 @@ Goal: practice + reference for coding interviews.
 - [x] Ring Buffer
 - [x] Throttle
 - [x] Debounce
+- [x] Maze Solver
