@@ -15,3 +15,4 @@ Goal: practice + reference for coding interviews.
 - [x] Throttle
 - [x] Debounce
 - [x] Maze Solver
+- [ ] Quick Sort (recursive (in-place & immutable)) 

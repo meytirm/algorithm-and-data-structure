@@ -1,4 +1,4 @@
-import {bubbleSort} from "../src/bubble-sort/BubbleSort";
+import {bubbleSort} from "../src/bubble-sort/bubble-sort";
 
 describe('bubbleSort', () => {
   it('should sort an array of numbers in ascending order', () => {
